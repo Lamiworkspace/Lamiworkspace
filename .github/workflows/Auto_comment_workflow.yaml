@@ -10,5 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Get events"
-        run: ${{toJSON(github.event)}}
+        run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
