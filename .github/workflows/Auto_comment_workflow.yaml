@@ -1,8 +1,11 @@
+
 name: Auto_commit_workflow
 on:
   push:
     branches:
-      - main
+      - main2
+  issues:
+    types: [opened]
 
 jobs:
   Issue_Commit_Workflow:
@@ -12,3 +15,17 @@ jobs:
       - name: "Get events"
         run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
+  
+  Add_Commits_events:
+    name: "Adding_Commits_in_Events"
+    runs-on: ubuntu-latest
+    uses: peter-evans/create-or-update-comment@v5
+    with:
+      issue-number: ${{ github.event.issue.number }}
+      body: |
+        This is a multi-line test comment
+        - With GitHub **Markdown** :sparkles:
+        - Created by [create-or-update-comment][1]
+
+        [1]: https://github.com/peter-evans/create-or-update-comment
+      reactions: '+1'
