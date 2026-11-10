@@ -1,4 +1,4 @@
-
+#Allow GITHUB_TOKEN  have read and write access for all permissions (the permissive setting)
 name: Auto_commit_workflow
 on:
   push:
