@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+  issues:
+    types: opened
 
 jobs:
   Issue_Commit_Workflow:
