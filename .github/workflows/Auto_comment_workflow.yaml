@@ -1,1 +1,14 @@
-name: "Auto_"
+name: Auto_commit_workflow
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Issue_Commit_Workflow:
+    name: "Issue_Commit_Workflow"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Get events"
+        run: ${{toJSON(github.event)}}
+        shell: bash
