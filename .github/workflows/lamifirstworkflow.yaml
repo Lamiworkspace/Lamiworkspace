@@ -1,0 +1,24 @@
+name: myfirstworkflow
+on:
+  push:
+    branches:
+      - main
+jobs:
+  myfirstjob:
+    name: "runfirstjob"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "runningmyfirststeps"
+        uses: actions/checkout@v2.3.4
+
+      - name: "runningshellscript"
+        run: echo "Hi welcome to github"
+        shell: bash
+ 
+  Goodbayjob:
+    name: "Runpowershell"
+    runs-on: windows-latest
+    steps:
+      - name: powershell
+        run: write-host "ABCDEFGHIJ"
+        shell: powershell
