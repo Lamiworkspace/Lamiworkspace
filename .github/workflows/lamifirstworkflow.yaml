@@ -2,7 +2,7 @@ name: myfirstworkflow
 on:
   push:
     branches:
-      - main
+      - main02
 jobs:
   myfirstjob:
     name: "runfirstjob"
@@ -22,3 +22,4 @@ jobs:
       - name: powershell
         run: write-host "ABCDEFGHIJ"
         shell: powershell
+
