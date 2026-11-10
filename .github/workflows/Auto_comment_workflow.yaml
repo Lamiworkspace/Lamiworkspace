@@ -15,7 +15,7 @@ jobs:
       - name: "Get events"
         run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
-  
+
   Add_Commits_events:
     name: "Adding_Commits_in_Events"
     runs-on: ubuntu-latest
@@ -29,3 +29,4 @@ jobs:
 
         [1]: https://github.com/peter-evans/create-or-update-comment
       reactions: '+1'
+
