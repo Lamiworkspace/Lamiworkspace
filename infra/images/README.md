@@ -1,4 +1,4 @@
-# Packer
+## Packer
 
 This packer file will build an Ubuntu Server 20.04 LTS AWS AMI with the following installed:
 
