@@ -6,7 +6,7 @@ This packer file will build an Ubuntu Server 20.04 LTS AWS AMI with the followin
 - Node 14.x
   - pm2
 
-## Setup
+## Setup#
 
 Build the AMI:
 
